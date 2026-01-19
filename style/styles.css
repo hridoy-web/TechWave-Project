@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #1A0B2E;
+    color: white;
+}
+
+/*nav bar & hero parents class */
+.header-top {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* navbar child item control parents class */
+.nav-container {
+    width: 90%;
+    max-width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+/* nav bar full logo control container  */
+.logo-container {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* nav logo [wave] text color design  */
+.nav-logo {
+    color: rgba(238, 3, 226, 1);
+    display: inline-block;
+}
+
+/* navbar link items  */
+.list-container {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* nav bar link text adjust  */
+.link-text {
+    text-decoration: none;
+    color: #D1D5DB;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+/* nav bar link text hover effect apply  */
+.link-text:hover {
+    color: white;
+}
+
+/* nav bar button design  */
+.primary-btn {
+    background: linear-gradient(90deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    border: none;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 1px;
+    justify-content: center;
+}
+
+/* nav bar button hover effect apply  */
+.primary-btn:hover {
+    box-shadow: 0 0 20px rgba(238, 3, 226, 0.685);
+    transform: scale(1.02);
+}
