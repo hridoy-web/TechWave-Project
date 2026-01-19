@@ -85,3 +85,91 @@ body {
     box-shadow: 0 0 20px rgba(238, 3, 226, 0.685);
     transform: scale(1.02);
 }
+
+/* shared styles for hide input box and subscribe button hide only mobile device*/
+#check-menu, .nav-button{
+    display: none;
+}
+
+/* mobile responsive humburger level adjust  */
+.humburger-label {
+    display: block;
+    cursor: pointer;
+    order: 2;
+}
+
+/* humburger icon img setup  */
+.humburger-img {
+    margin-top: 5px;
+    width: 30px;
+}
+
+/* humburger icon function setup  */
+.list-container {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 85px;
+    right: -100%;
+    width: auto;
+    height: auto;
+    background-color: #1A0B2E;
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 30px;
+    z-index: 1000;
+    transition: 0.5s ease;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* right side animation for list item */
+#check-menu:checked~.list-container {
+    right: 0;
+}
+
+/* mobile responsive code  */
+@media screen and (min-width: 576px) {
+    .nav-container {
+        width: 95%;
+    }
+
+    .logo-container {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    /* humburger icon large device hide  */
+    .humburger-label {
+        display: none;
+    }
+
+    /* large device subscribe button showing */
+    .nav-button {
+        display: inline-flex;
+    }
+
+    /* font awsome icon showing  */
+    .nav-button i {
+        display: inline-block;
+    }
+
+    /* large device navbar items fixed  */
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .list-container {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        padding: 0;
+        gap: 3rem;
+        border: none;
+    }
+}
