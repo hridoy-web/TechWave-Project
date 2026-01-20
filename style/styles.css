@@ -139,18 +139,21 @@ body {
 }
 
 .banner-parents {
+    overflow: hidden;
     position: relative;
     width: 100%;
     max-width: 440px;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
+    margin: 0 auto 20px auto;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .hero-main-background {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
     z-index: 1;
 }
@@ -252,6 +255,57 @@ body {
     height: auto;
 }
 
+/* about the podcast section  */
+.podcast-section {
+    width: 100%;
+    max-width: 440px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.podcast-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.podcast-description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffffd8;
+    margin-bottom: 40px;
+}
+
+.content-underline {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.card-heading {
+    color: #00FF88;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 12PX;
+    letter-spacing: 1px;
+    line-height: 1.2rem;
+    color: #D1D5DB;
+}
 
 /* mobile responsive code  */
 @media screen and (min-width: 576px) {
@@ -290,12 +344,44 @@ body {
 
     /* hero section responsive for large device  */
     .hero-container {
-        max-width: 1600px;
+        max-width: 100%;
+        height: auto;
         margin: 0 auto;
+        padding: 40px;
     }
 
     .hero-tittle {
         font-size: 3.5rem;
     }
 
+    /* PODCAST SECTION RESPONSIVE 993PX  */
+    .podcast-section {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 3rem 7rem;
+    }
+
+    .podcast-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .podcast-heading {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .podcast-description {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .card-description {
+        font-size: 16px;
+    }
 }
