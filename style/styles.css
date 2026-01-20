@@ -8,6 +8,7 @@ body {
     font-family: "Inter", sans-serif;
     background-color: #1A0B2E;
     color: white;
+    overflow-x: hidden;
 }
 
 /*nav bar & hero parents class */
@@ -36,16 +37,8 @@ body {
 
 /* nav logo [wave] text color design  */
 .nav-logo {
-    color: rgba(238, 3, 226, 1);
+    color: rgb(212, 0, 255);
     display: inline-block;
-}
-
-/* navbar link items  */
-.list-container {
-    display: flex;
-    list-style: none;
-    gap: 3rem;
-    align-items: center;
 }
 
 /* nav bar link text adjust  */
@@ -67,9 +60,9 @@ body {
 .primary-btn {
     background: linear-gradient(90deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
     color: white;
-    padding: 12px 24px;
-    font-size: 20px;
-    font-weight: 700;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
     align-items: center;
     border: none;
     border-radius: 50px;
@@ -86,8 +79,9 @@ body {
     transform: scale(1.02);
 }
 
-/* shared styles for hide input box and subscribe button hide only mobile device*/
-#check-menu, .nav-button{
+/* shared styles for hide input box and subscribe button */
+#check-menu,
+.nav-button {
     display: none;
 }
 
@@ -95,7 +89,6 @@ body {
 .humburger-label {
     display: block;
     cursor: pointer;
-    order: 2;
 }
 
 /* humburger icon img setup  */
@@ -108,10 +101,12 @@ body {
 .list-container {
     display: flex;
     position: fixed;
+    list-style: none;
     flex-direction: column;
     top: 85px;
     right: -100%;
-    width: auto;
+    width: 50%;
+    max-width: 250px;
     height: auto;
     background-color: #1A0B2E;
     text-align: center;
@@ -128,18 +123,150 @@ body {
     right: 0;
 }
 
+
+/* hero section mobile first */
+.hero-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-parents {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero-main-background {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.microphone-group {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* cirle image adjust hero main background  */
+.circle-png {
+    width: 100%;
+    position: absolute;
+}
+
+/* mic icon adjust circle image  */
+.mic-png {
+    width: 60px;
+    position: relative;
+    z-index: 3;
+}
+
+/* NEW button add mic images */
+.new-btn {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    background: #00FF88;
+    color: #1A0B2E;
+    padding: 5px 16px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    z-index: 4;
+}
+
+/* hero section h1 heading adjust  */
+.hero-tittle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* hero section paragraf adjust  */
+.hero-description {
+    font-size: 16px;
+    color: #ffffffd8;
+    margin-bottom: 24px;
+}
+
+/* hero all button parents  */
+.hero-btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 5px;
+}
+
+/* transparent button making  */
+.transparent-btn {
+    background: transparent;
+    border: 1px solid #00FF88;
+    color: #00FF88;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+}
+
+/* TRANSPARENT button hover effect apply  */
+.transparent-btn:hover {
+    transform: scale(1.02);
+}
+
+/* mobile device hero section button adjust  */
+.hero-btn-group button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 10rem;
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 14px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn-icon-png {
+    width: 20px;
+    height: auto;
+}
+
+
 /* mobile responsive code  */
 @media screen and (min-width: 576px) {
     .nav-container {
         width: 95%;
     }
 
+    /* small device logo size fixed  */
     .logo-container {
         font-size: 2rem;
     }
 }
 
 @media screen and (min-width: 993px) {
+
     /* humburger icon large device hide  */
     .humburger-label {
         display: none;
@@ -150,26 +277,25 @@ body {
         display: inline-flex;
     }
 
-    /* font awsome icon showing  */
-    .nav-button i {
-        display: inline-block;
-    }
-
-    /* large device navbar items fixed  */
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
+    /* large device list item fixed  */
     .list-container {
-        display: flex;
         position: static;
         flex-direction: row;
         background: transparent;
-        width: auto;
-        padding: 0;
         gap: 3rem;
-        border: none;
+        justify-content: center;
+        padding: 0;
+        box-shadow: none;
     }
+
+    /* hero section responsive for large device  */
+    .hero-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .hero-tittle {
+        font-size: 3.5rem;
+    }
+
 }
